@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 30 15% 18%;
+
+    --card: 38 30% 95%;
+    --card-foreground: 30 15% 18%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 30 15% 18%;
+
+    --primary: 152 28% 42%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 30 15% 25%;
+
+    --muted: 35 18% 90%;
+    --muted-foreground: 30 8% 52%;
+
+    --accent: 14 55% 65%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 152 28% 42%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 30 10% 30%;
+    --sidebar-primary: 152 28% 42%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 30 10% 30%;
+    --sidebar-border: 35 18% 88%;
+    --sidebar-ring: 152 28% 42%;
+
+    /* Custom tokens */
+    --warm-cream: 40 40% 94%;
+    --soft-sand: 35 25% 85%;
+    --sage: 152 28% 42%;
+    --sage-light: 152 22% 88%;
+    --coral: 14 55% 65%;
+    --coral-light: 14 40% 90%;
+    --sky: 200 30% 80%;
+    --sky-light: 200 25% 92%;
+  }
+
+  .dark {
+    /* Pure Black Backgrounds */
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Aqua Green Primary */
+    --primary: 160 84% 39%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 160 84% 39%;
+
+    /* Custom tokens - matching new palette with pure black */
+    --neon-cyan: 160 84% 39%;
+    --neon-purple: 270 80% 60%;
+    --neon-blue: 0 0% 0%;
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 0 0% 5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .clay-card {
+    @apply bg-card rounded-2xl border border-border;
+    box-shadow:
+      8px 8px 16px hsl(35 20% 84% / 0.6),
+      -4px -4px 12px hsl(40 40% 99% / 0.8);
+  }
+
+  .clay-card-elevated {
+    @apply bg-card rounded-3xl border border-border;
+    box-shadow:
+      12px 12px 24px hsl(35 20% 82% / 0.5),
+      -6px -6px 16px hsl(40 40% 99% / 0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark .clay-card-elevated {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .clay-card-elevated:hover {
+    @apply border-primary/30;
+    box-shadow: 0 20px 40px -20px rgba(0, 255, 213, 0.15);
+    transform: translateY(-8px);
+  }
+
+  .clay-button {
+    @apply bg-primary text-primary-foreground rounded-full px-8 py-3 font-heading font-medium relative overflow-hidden;
+    box-shadow:
+      4px 4px 10px hsl(152 28% 35% / 0.3),
+      -2px -2px 6px hsl(152 28% 55% / 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark .clay-button {
+    box-shadow: 0 4px 14px 0 rgba(0, 255, 213, 0.2);
+  }
+
+  .clay-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 255, 213, 0.4);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-background/70 border-b border-white/5;
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .organic-blob {
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
