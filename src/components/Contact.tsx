@@ -53,10 +53,9 @@ export default function Contact() {
               <div className="pl-6 text-foreground/80 space-y-1">
                 <p>{"{"}</p>
                 <p className="pl-4"><span className="text-primary">"name"</span>: "Swati Verma",</p>
-                <p className="pl-4"><span className="text-primary">"role"</span>: "Full Stack Developer",</p>
-                <p className="pl-4"><span className="text-primary">"email"</span>: <a href="mailto:iamswativerma10@gmail.com" className="text-secondary hover:underline">"{contactInfo.email}"</a>,</p>
-                <p className="pl-4"><span className="text-primary">"github"</span>: <a href="https://github.com/swativerma08" target="_blank" className="text-secondary hover:underline">"{contactInfo.github}"</a>,</p>
-                <p className="pl-4"><span className="text-primary">"linkedin"</span>: <a href="https://www.linkedin.com/in/swati-verma-53b949285/" target="_blank" className="text-secondary hover:underline">"{contactInfo.linkedin}"</a>,</p>
+                <p className="pl-4"><span className="text-primary">"email"</span>: <a href="mailto:iamswativerma10@gmail.com" className="text-foreground/80 hover:text-primary hover:underline">"{contactInfo.email}"</a>,</p>
+                <p className="pl-4"><span className="text-primary">"github"</span>: <a href="https://github.com/swativerma08" target="_blank" className="text-foreground/80 hover:text-primary hover:underline">"{contactInfo.github}"</a>,</p>
+                <p className="pl-4"><span className="text-primary">"linkedin"</span>: <a href="https://www.linkedin.com/in/swati-verma-53b949285/" target="_blank" className="text-foreground/80 hover:text-primary hover:underline">"{contactInfo.linkedin}"</a>,</p>
                 <p className="pl-4"><span className="text-primary">"location"</span>: "{contactInfo.location}"</p>
                 <p>{"}"}</p>
               </div>

@@ -10,7 +10,7 @@ export default function Footer() {
             href="https://github.com/swativerma08"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="font-heading text-sm text-foreground/80 hover:text-primary transition-colors duration-300"
           >
             GitHub
           </a>
@@ -18,7 +18,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/swati-verma-53b949285/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="font-heading text-sm text-foreground/80 hover:text-primary transition-colors duration-300"
           >
             LinkedIn
           </a>
@@ -26,7 +26,7 @@ export default function Footer() {
             href="https://www.instagram.com/swati.verma__10/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-heading text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="font-heading text-sm text-foreground/80 hover:text-primary transition-colors duration-300"
           >
             Instagram
           </a>
