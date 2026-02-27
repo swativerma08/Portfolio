@@ -29,6 +29,13 @@ const projects = [
     color: "bg-secondary",
     emoji: "🌾",
   },
+  {
+    title: "College Management System",
+    description: "An industrial-grade web application to digitalize institutional academic and administrative operations with role-based modules.",
+    tags: ["Python", "Modular Architecture", "Automation"],
+    color: "bg-indigo-light",
+    emoji: "🎓",
+  },
 ];
 
 export default function Projects() {
