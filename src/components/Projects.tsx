@@ -2,11 +2,20 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Clear Vision Store",
+    description: "A premium e-commerce platform for high-quality eyewear, featuring categorized product listings, interactive color variants, and a seamless shopping experience.",
+    tags: ["React", "Vite", "Tailwind CSS", "Lucide"],
+    color: "bg-amber-light",
+    emoji: "👓",
+    link: "https://github.com/swativerma08/clear-vision-store",
+  },
+  {
     title: "Food Ordering System",
     description: "A comprehensive full-stack platform for managing food orders, user profiles, and delivery tracking.",
     tags: ["Python", "Django", "React", "PostgreSQL"],
     color: "bg-sage-light",
     emoji: "🍕",
+    link: "https://github.com/swativerma08/food-ordering-system",
   },
   {
     title: "Scriptsetu",
@@ -14,6 +23,7 @@ const projects = [
     tags: ["React Native", "Expo", "AI Vision"],
     color: "bg-coral-light",
     emoji: "📸",
+    link: "https://github.com/swativerma08/scriptsetu",
   },
   {
     title: "Code Arena",
@@ -21,6 +31,7 @@ const projects = [
     tags: ["React", "Node.js", "Supabase"],
     color: "bg-sky-light",
     emoji: "⚔️",
+    link: "https://github.com/swativerma08/Code-Arena",
   },
   {
     title: "Crop Advisory",
@@ -28,6 +39,7 @@ const projects = [
     tags: ["React", "PWA", "Machine Learning"],
     color: "bg-secondary",
     emoji: "🌾",
+    link: "https://github.com/swativerma08/Crop-Advisory-for-Low-Internet-Farmers-Offline-First-",
   },
   {
     title: "College Management System",
@@ -35,6 +47,7 @@ const projects = [
     tags: ["Python", "Modular Architecture", "Automation"],
     color: "bg-indigo-light",
     emoji: "🎓",
+    link: "https://github.com/swativerma08/College-Management-System-",
   },
 ];
 
@@ -65,13 +78,16 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
               key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`clay-card group cursor-pointer overflow-hidden ${i === 0 ? "md:translate-y-8" : ""} ${i === 3 ? "md:-translate-y-8" : ""}`}
+              className={`clay-card group cursor-pointer block overflow-hidden ${i === 0 || i % 2 === 0 ? "md:translate-y-8" : ""} ${i === 3 ? "md:-translate-y-8" : ""}`}
             >
               <div className={`${project.color} p-12 flex items-center justify-center`}>
                 <span className="text-7xl group-hover:scale-110 transition-transform duration-500">
@@ -96,7 +112,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </motion.div>

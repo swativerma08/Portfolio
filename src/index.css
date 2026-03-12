@@ -54,6 +54,8 @@
     --coral-light: 14 40% 90%;
     --sky: 200 30% 80%;
     --sky-light: 200 25% 92%;
+    --amber: 45 92% 50%;
+    --amber-light: 45 92% 94%;
   }
 
   .dark {
@@ -99,6 +101,8 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 0 0% 10%;
     --sidebar-ring: 160 84% 39%;
+    --amber: 45 92% 50%;
+    --amber-light: 45 92% 20%;
   }
 }
 
